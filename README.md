@@ -318,7 +318,7 @@ function template(data){
   return [
     "<div class='Panel'>",
       "<h3 class='Panel-title'>",
-        escapeHTML(data.title)
+        escapeHTML(data.title),
       "</h3>",
     "</div>"
   ].join("")
