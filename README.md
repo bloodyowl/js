@@ -7,6 +7,7 @@ use consistent naming conventions.
 - constructors must use `PascalCase`
 - variables and methods must use `camelCase`
 - privates should be `_camelCase` (preceeded by an underscore)
+- consts shoud be `UPPER_CASE`
 
 ## wording
 
