@@ -348,6 +348,11 @@ function template(data){
 }
 ```
 
+## architecture
+
+- separate data from view
+- make your components communicate through global/local events for simple testing
+
 ## do not forget
 
 - the `radix` argument in `parseInt`
