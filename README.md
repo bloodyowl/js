@@ -138,6 +138,9 @@ define(
 )
 ```
 
+if you open-source a lib, just use the commonjs syntax. 
+the browserify `standalone` option makes UMD builds. 
+
 ## loops
 
 ### arrays
