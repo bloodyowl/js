@@ -98,7 +98,7 @@ lighter, and the syntax less confusing.
 
 ```javascript
 var $ = require("jquery")
-  , BaseView = require("../baseView")
+var BaseView = require("../baseView")
 
 module.exports = BaseView.extend({
   events : {
@@ -106,7 +106,7 @@ module.exports = BaseView.extend({
   },
   togglePanel : function(eventObject){
     var target = eventObject.currentTarget
-      , panel = document.getElementById(target.getAttribute("data-panel"))
+    var panel = document.getElementById(target.getAttribute("data-panel"))
     $(panel).toggleClass("Panel--visible")
   }
 })
@@ -130,7 +130,7 @@ define(
       },
       togglePanel : function(eventObject){
         var target = eventObject.currentTarget
-          , panel = document.getElementById(target.getAttribute("data-panel"))
+        var panel = document.getElementById(target.getAttribute("data-panel"))
         $(panel).toggleClass("Panel--visible")
       }
     })
@@ -155,8 +155,8 @@ or a loop.
 
 ```javascript
 var index = -1
-  , length = array.length
-  , item
+var length = array.length
+var item
 
 while(++index < length) {
   item = array[index]
@@ -173,7 +173,7 @@ or a loop.
 
 ```javascript
 var key
-  , item
+var item
 
 for(key in object) {
   if(!object.hasOwnProperty(key)) {
@@ -193,9 +193,9 @@ for this :
 
 ```javascript
 var index = -1
-  , length = array.length
-  , item
-  , key
+var length = array.length
+var item
+var key
 
 arrayLoop:
 while(++index < length) {
@@ -242,15 +242,9 @@ function transitionFn(){
 
 ## variables
 
-use whether one `var` statement, or multiple ones,
-just do not break the indentation.
+use multiple `var` statements.
 
 ```javascript
-var foo = "foo"
-  , bar = "bar"
-  , baz = "baz"
-
-// or
 var foo = "foo"
 var bar = "bar"
 var baz = "baz"
@@ -304,7 +298,7 @@ module.exports = view.extend({
   ],
   togglePanel : function(eventObject){
     var target = eventObject.currentTarget
-      , panel = target.querySelector(".js-Panel")
+    var panel = target.querySelector(".js-Panel")
     panel.classList.toggle("Panel--visible")
   }
 })
@@ -338,7 +332,7 @@ function template(data){
   var fragment = document.createDocumentFragment()
   data.forEach(function(item){
     var panel = document.createElement("div")
-      , title = document.createElement("h3")
+    var title = document.createElement("h3")
     panel.className = "Panel"
     title.className = "Panel-title"
     title.appendChild(
