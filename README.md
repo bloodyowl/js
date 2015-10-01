@@ -2,7 +2,7 @@
 
 ## syntax
 
-use consistent naming conventions.
+Use consistent naming conventions.
 
 - constructors must use `PascalCase`
 - variables and methods must use `camelCase`
@@ -11,7 +11,7 @@ use consistent naming conventions.
 
 ## wording
 
-use descriptive names.
+Use descriptive names.
 
 to catch `this` into a variable :
 
@@ -19,7 +19,7 @@ to catch `this` into a variable :
 - use the instance descriptive name
 (`User` class, `var user = this`)
 
-do not name variables with single letters.
+Do not name variables with single letters.
 
 ```javascript
 function User(options){
@@ -51,29 +51,29 @@ User.prototype.alertName = function(){
 
 ## semicolon(-less)
 
-this is not a troll, they are automatically inserted,
-so that you can remove this syntaxic noise.
+This is not a troll, they are automatically inserted
+so that you can remove this syntactic noise.
 
-this is a language feature, well interpreted everywhere.
+This is a language feature well interpreted everywhere.
 
-good uglifiers will parse them when necessary.
+Good uglifiers will parse them when necessary.
 
 [» specificiation](http://es5.github.io/#x7.9)
 
 ## indentation
 
-indent with 2 spaces (never tabs).
+Indent with 2 spaces (never tabs).
 
 ## limits
 
-try to put yourself some limits for better maintainability :
+Try to put yourself some limits for better maintainability :
 
 - 80 chars per line
 - 200 lines of code for a file
 
 are some quite common ones.
 
-if a function have *long* arguments, break lines between each argument
+If a function has  *long* arguments, break lines between each argument
 for better readability :
 
 ```javascript
@@ -88,11 +88,11 @@ view.updateContents(
 
 ## module system
 
-in order to separate your files, you'd better divise your script into modules.
+In order to separate your files, you should divide your script into modules.
 
-if you concat your files in the end, no not use requirejs
-but rather browserify, this will make the codebase a little
-lighter, and the syntax less confusing.
+If you concat your files in the end, do not use requirejs
+but rather use browserify. This will make the codebase a little
+lighter, and the syntax a little less confusing.
 
 ### synchronous
 
@@ -114,7 +114,7 @@ module.exports = BaseView.extend({
 
 ### asynchronous
 
-if you use requirejs, do not place all your dependencies in
+If you use requirejs, do not place all your dependencies in
 one single line, keep it clear :
 
 ```javascript
@@ -138,19 +138,19 @@ define(
 )
 ```
 
-if you open-source a lib, just use the commonjs syntax. 
-the browserify `standalone` option makes UMD builds. 
+If you open-source a lib, just use the commonjs syntax. 
+The browserify `standalone` option makes UMD builds. 
 
 ## loops
 
 ### arrays
 
-avoid `for(;;)` loops and use `while` instead.
+Avoid `for(;;)` loops and use `while` instead.
 
-this forces you to initialise you variables upper and
-lets only the `condition` expression in the loop declaration.
+This forces you to initialize your variables above and
+take only the `condition` expression in the loop declaration.
 
-use `break` and `continue` statements to early-exit an iteration
+Use `break` and `continue` statements to early-exit an iteration
 or a loop.
 
 ```javascript
@@ -166,7 +166,7 @@ while(++index < length) {
 
 ### objects
 
-initialise you variables upper.
+Initialize your variables above.
 
 use `break` and `continue` statements to early-exit an iteration
 or a loop.
@@ -186,9 +186,9 @@ for(key in object) {
 
 ### labels
 
-labels are rarely used, but can be useful.
+Labels are rarely used, but can be useful.
 
-if you nest loops, you might want to exit an upper loop, use labels
+If you nest loops, you might want to exit an upper loop, use labels
 for this :
 
 ```javascript
@@ -215,9 +215,9 @@ while(++index < length) {
 
 ### inside a block
 
-assign to a variable
+Assign to a variable
 
-the reason for this is that function declaration are made
+The reason for this is that function declarations are made
 available to the scope before the parent function execution.
 
 ```javascript
@@ -259,7 +259,7 @@ do not mix getters and setters (oh hai jquery)
 
 ## chaining
 
-avoid chaining or indent it correctly
+If you use chaining, make sure to indent to make it readable.
 
 ```javascript
 gulp.src("foo")
@@ -308,7 +308,7 @@ module.exports = view.extend({
 
 #### as strings
 
-if you have to use an inline string template, use an array for
+If you have to use an inline string template, use an array for
 better presentation :
 
 ```javascript
